@@ -2,18 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegController;
 
 Route::get('/', [PostController::class, 'index']);
 Route::post('/post', [PostController::class, 'store']);
 
-Route::get('/where-to-go', function () {
-    return view('where-to-go');
-});
+Route::get('/register', [RegController::class, 'index']);
+Route::post('/register', [RegController::class, 'register']);
 
-Route::get('/register', function () {
-    return view('reg');
-});
 
-Route::get('/post', function () {
-    return view('post-create');
-});
