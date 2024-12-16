@@ -10,41 +10,35 @@
     <header>
         <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Туры</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Блог</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
         </ul>
     </header>
     <section class="slider">
     </section>
     <section class="about-us">
-        @if(isset($posts) && count($posts) > 0)
-            {{ dd($posts) }} {{-- Отладочный вывод --}}
-            @foreach ($posts as $post)
-                <div class="card">
-                    <div class="about-img">
-                        <img src="{{ $post->image }}" alt="Image for {{ $post->title }}">
-                    </div>
-                    <div class="about-text">
-                        <h2>{{ $post->title }}</h2>
-                        <p>{{ $post->content }}</p>
-                    </div>
+        @foreach ($posts as $post)
+            <div class="card">
+                <div class="about-img">
+                    <img src= {{$post->image}} alt="Image 1">
                 </div>
-            @endforeach
-        @else
-            <p>Нет доступных постов.</p>
-        @endif
+                <div class="about-text">
+                    {{$post->title}}
+                    {{$post->content}}
+                </div>
+            </div>
+        @endforeach
         <a href="#">Подробнее</a>
     </section>
     <footer>
         <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Туры</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Блог</a></li>
-        </ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
     </footer>
 </body>
 </html>
