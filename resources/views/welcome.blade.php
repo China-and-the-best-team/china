@@ -47,7 +47,9 @@
     <section class="exchange-rate">
         <h2>Курс валют</h2>
             @if(isset($exchangeRate) && $exchangeRate !== null)
-                <p>1 юань (CNY) = {{ number_format($exchangeRate, 4) }} рублей (RUB)</p>
+            <input type="number" name="exchangeRate" class="exchangeRate" value="1" onchange="document.querySelector('.exchangeResult').innerHTML = (document.querySelector('.exchangeRate').value * {{$exchangeRate}}).toFixed(2)"> 
+            <p>юань (CNY) = <span class="exchangeResult">{{ number_format($exchangeRate, 2) }}</span> рублей (RUB)</p>
+            
             @else
                 <p>Курс валют временно недоступен. Пожалуйста, попробуйте позже.</p>
             @endif
