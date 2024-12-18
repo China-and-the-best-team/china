@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('created_at', 'ASC')->get();
+        $posts = Post::groupBy('created_at', 'ASC')->get();
         return view('welcome', compact('posts'));
     }
 
