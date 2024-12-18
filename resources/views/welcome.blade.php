@@ -44,6 +44,14 @@
             @endforeach
         <a href="#">Подробнее</a>
     </section>
+    <section class="exchange-rate">
+        <h2>Курс валют</h2>
+            @if(isset($exchangeRate) && $exchangeRate !== null)
+                <p>1 юань (CNY) = {{ number_format($exchangeRate, 4) }} рублей (RUB)</p>
+            @else
+                <p>Курс валют временно недоступен. Пожалуйста, попробуйте позже.</p>
+            @endif
+    </section>
     <footer>
         <ul>
             <li><a href="#">Главная</a></li>
