@@ -26,7 +26,7 @@
             <label for="city">Город:</label>
             <input type="text" id="city" name="city" required>
             <label for="title">Текст:</label>
-            <input type="text" id="title" name="content" required>
+            <input type="text" id="text" name="content" required>
             <label for="image">Изображение</label>
             <input type="text" id="image" name="image" required>
             <input type="submit" value="Опубликовать">
