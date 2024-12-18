@@ -17,17 +17,27 @@
                 <li><a href="#">Аккаунт</a></li>
             </ul>
         </header>
-        <h1>Регистрация</h1>
-        <form action="/register" method="post">
-            @csrf
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Почта:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Зарегистрироваться">
-        </form>
+        <h1>Вход в систему</h1>
+            <form method="POST" action="{{ route('login') }}" class="auth-form">
+                @csrf
+                <div class="form-group">
+                    <label for="email">Электронная почта</label>
+                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input id="password" type="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Войти</button>
+
+                @if ($errors->any())
+                    <div class="auth-errors">
+                        @foreach ($errors->all() as $error)
+                            <p>{{ $error }}</p>
+                        @endforeach
+                    </div>
+                @endif
+            </form>
         <footer>
             <ul>
                 <li><a href="#">Главная</a></li>
