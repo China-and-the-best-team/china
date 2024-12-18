@@ -15,6 +15,18 @@
             <li><a href="#">Контакты</a></li>
             <li><a href="#">Блог</a></li>
         </ul>
+        @if ($isLoggedIn)
+            <a href="{{ route('logout') }}" class="nav-link"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Выйти
+            </a>
+            <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
+                @csrf
+            </form>
+        @else
+            <a href="{{ route('login') }}" class="nav-link">Вход</a>
+            <a href="{{ route('register') }}" class="nav-link">Регистрация</a>
+        @endif
     </header>
     <section class="slider">
     </section>

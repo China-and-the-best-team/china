@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -12,8 +13,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        $isLoggedIn = Auth::check();
         $posts = Post::groupBy('created_at', 'ASC')->get();
-        return view('welcome', compact('posts'));
+        return view('welcome', compact('posts', 'isLoggedIn'));
     }
 
     public function index2()
