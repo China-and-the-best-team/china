@@ -19,8 +19,6 @@
     <section class="slider">
     </section>
     <section class="about-us">
-        @if(isset($posts) && count($posts) > 0)
-            {{ dd($posts) }} {{-- Отладочный вывод --}}
             @foreach ($posts as $post)
                 <div class="card">
                     <div class="about-img">
@@ -32,9 +30,6 @@
                     </div>
                 </div>
             @endforeach
-        @else
-            <p>Нет доступных постов.</p>
-        @endif
         <a href="#">Подробнее</a>
     </section>
     <footer>

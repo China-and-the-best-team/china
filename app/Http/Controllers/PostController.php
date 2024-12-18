@@ -16,6 +16,17 @@ class PostController extends Controller
         return view('welcome', compact('posts'));
     }
 
+    public function index2()
+    {
+        return view('post-create');
+    }
+
+    public function index_post($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('single-place', compact('post'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
