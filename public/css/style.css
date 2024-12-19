@@ -1,7 +1,26 @@
-.header{
+header ul{
     display: flex;
-
+    justify-content: space-around;
 }
-.header ul{
+
+header ul{
     list-style: none;
+}
+.main-text{
+    text-align: center;
+    width: 400px;
+}
+.main{
+    display: flex;
+    justify-content: left;
+    background-image: url('../public/image/main.jpg');
+    background-size: cover;  /* Чтобы изображение растягивалось на весь блок */
+    background-position: center; /* Чтобы изображение было по центру */
+}
+
+h2{
+    font-size: 49.58px;
+}
+p{
+    font-size: 20px;
 }
