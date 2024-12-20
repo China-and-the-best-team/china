@@ -7,7 +7,6 @@
     <link  rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <title>ChinaTour</title>
 </head>
 <body>
@@ -18,7 +17,7 @@
             <li><a href="#">Туры</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">Блог</a></li>
-        
+
         @if ($isLoggedIn)
         <li><a href="{{ route('logout') }}" class="nav-link"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -44,7 +43,6 @@
     <section class="about-us">
     @foreach ($posts as $post)
         <div class="card">
-        
             <div class="about-img">
                 <img src="{{ $post->image }}" alt="Image for {{ $post->title }}">
             </div>
@@ -53,17 +51,15 @@
                 <p>{{ $post->content }}</p>
                 <a href="{{ route('show', $post->id) }}">Подробнее</a>
             </div>
-            
         </div>
-        
     @endforeach
 </section>
     <section class="exchange-rate">
         <h5>Курс валют</h5>
             @if(isset($exchangeRate) && $exchangeRate !== null)
-            <input type="number" name="exchangeRate" class="exchangeRate" value="1" onchange="document.querySelector('.exchangeResult').innerHTML = (document.querySelector('.exchangeRate').value * {{$exchangeRate}}).toFixed(2)"> 
+            <input type="number" name="exchangeRate" class="exchangeRate" value="1" onchange="document.querySelector('.exchangeResult').innerHTML = (document.querySelector('.exchangeRate').value * {{$exchangeRate}}).toFixed(2)">
             <p>юань (CNY) = <span class="exchangeResult">{{ number_format($exchangeRate, 2) }}</span> рублей (RUB)</p>
-            
+
             @else
                 <p>Курс валют временно недоступен. Пожалуйста, попробуйте позже.</p>
             @endif

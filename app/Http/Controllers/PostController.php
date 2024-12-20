@@ -14,7 +14,7 @@ class PostController extends Controller
     public function index()
     {
         $isLoggedIn = Auth::check();
-        $posts = Post::groupBy('created_at', 'ASC')->get();
+        $posts = Post::groupBy('id', 'desc')->get();
         return view('welcome', compact('posts', 'isLoggedIn'));
     }
 
@@ -25,8 +25,9 @@ class PostController extends Controller
 
     public function show($id)
     {
+        $isLoggedIn = Auth::check();
         $post = Post::findOrFail($id);
-        return view('show', compact('post'));
+        return view('single-place', compact('post', 'isLoggedIn'));
     }
 
     /**
@@ -79,5 +80,5 @@ class PostController extends Controller
     {
         //
     }
-    
+
 }

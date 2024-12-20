@@ -15,12 +15,9 @@
             <li><a href="#">Туры</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">Блог</a></li>
-        
+
         @if ($isLoggedIn)
-        <li><a href="{{ route('logout') }}" class="nav-link"
-                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                Выйти
-            </a></li>
+        <li><a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Выйти</a></li>
             <li><form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
                 @csrf
             </form></li>
@@ -33,9 +30,8 @@
     <section class="post">
         <h1>{{ $post->title }}</h1>
         <h2>{{ $post->city }}</h2>
-        <img src="{{ $post->image }}" alt="{{ $post->title }}">
+        <img src="{{ $post->image }}" alt="Image for {{ $post->title }}">
         <p>{{ $post->content }}</p>
-        <p>Публицировано: {{ $post->created_at->format('d.m.Y') }}</p>
         <hr>
     </section>
     <footer>
