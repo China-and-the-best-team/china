@@ -1,26 +1,262 @@
-header ul{
-    display: flex;
-    justify-content: space-around;
+body{
+    margin: 0;
+        font-family: "Roboto Serif", serif;
+        font-optical-sizing: auto;
 }
 
-header ul{
-    list-style: none;
-}
+
 .main-text{
+    margin-left:80px;
+    margin-top: 200px;
     text-align: center;
-    width: 400px;
+    width: 600px;
 }
 .main{
     display: flex;
     justify-content: left;
-    background-image: url('../public/image/main.jpg');
+    background-image: url('main.jpg');
     background-size: cover;  /* Чтобы изображение растягивалось на весь блок */
     background-position: center; /* Чтобы изображение было по центру */
+    height: 1065px;
 }
 
-h2{
+.main h2{
     font-size: 49.58px;
+    margin: 0;
+    
 }
-p{
+.main h1{
+    font-size: 166.1px;
+    margin: 0;
+    color: #800000;
+}
+.main p {
     font-size: 20px;
+
+}
+.main a{
+    text-decoration: none;
+    color: black ;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.about-us{
+    background-image: url('about.jpg');
+    background-size: cover;  /* Чтобы изображение растягивалось на весь блок */
+    background-position: center; /* Чтобы изображение было по центру */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.about-us a{
+    text-decoration: none;
+    color: rgb(255, 255, 255) ;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 20px;
+    
+}
+.card{
+    display: flex;
+    width: 600px;
+    height: 300px;
+}
+.about-text{
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+h2{
+    margin: 0;
+}
+
+.exchange-rate {
+    background-color: #f5f5dc; /* Light beige background */
+    border: 2px solid #d4af37; /* Gold border */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-family: 'Noto Serif SC', serif; /* A serif font with Chinese support */
+}
+
+.exchange-rate h5 {
+    color: #b22222; /* Firebrick red for headings */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.exchange-rate input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.exchange-rate p {
+    color: #333;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.exchange-rate .exchangeResult {
+    font-weight: bold;
+    color: #b22222;
+}
+
+
+/* Стили для навигации */
+header {
+    background-color: #800000; /* Красный фон для шапки */
+    padding: 15px 0;
+}
+
+header ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header ul li a:hover {
+    color: #FFD700; /* Золотой цвет при наведении */
+}
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain; /* Сохраняет пропорции, изображение полностью умещается */
+}
+
+
+
+
+
+
+
+
+/*Comments*/
+
+.about-tour{
+    background-image: url('comm.png');
+    background-size: cover;  /* ��тобы изображение растягивалось на весь блок */
+    background-position: center; /* ��тобы изображение было по центру */
+    
+}
+.about-tour h1{
+    text-align: center;
+}
+.about-tour img{
+    width: 400px;
+    height: 400px;
+    margin-left: 200px;
+}
+.text-container{
+    margin: auto;
+    width: 800px;
+    
+}
+textarea{
+    width: 600px;
+}
+.comment{
+    background-color: #FFF8DC;
+    padding: 20px;
+    border: 1px solid #8B0000;
+}
+
+
+/* Стили для аутентификации */
+p a {
+    color: #8B0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    color: #FFD700; /* Золотой цвет при наведении на ссылку */
+}
+
+form {
+    background-color: #FFF8DC;
+    padding: 20px;
+    border: 1px solid #8B0000;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8B0000;
+    border-radius: 5px;
+    background-color: #FAF0E6;
+}
+
+form button {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #FFD700; /* Золотой при наведении */
+}
+
+
+
+footer {
+    background-color: #800000; /* Красный фон для подвала */
+    padding: 15px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+footer ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer ul li a:hover {
+    color: #FFD700; /* Золотой цвет при наведении */
 }

@@ -23,10 +23,10 @@ class PostController extends Controller
         return view('post-create');
     }
 
-    public function index_post($id)
+    public function show($id)
     {
         $post = Post::findOrFail($id);
-        return view('single-place', compact('post'));
+        return view('show', compact('post'));
     }
 
     /**
@@ -55,10 +55,6 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -83,4 +79,5 @@ class PostController extends Controller
     {
         //
     }
+    
 }

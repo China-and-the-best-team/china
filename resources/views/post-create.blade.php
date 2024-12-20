@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <title>Registraation</title>
 </head>
 <body>
     <section class="reg">
         <header>
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Главная</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Туры</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Блог</a></li>
             </ul>
         </header>
         <h1>Добавить пост</h1>
